@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
+        <div *ngFor="let product of products">
+            <div class="card" style="width: 18rem; margin: 0 auto">
+                <img src="{{product.image}}" class="card-img-top" alt="Dish image">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">Indulge in the mouth-watering flavors of Italy with our authentic selection of
+                        delicious food and pastries and experience the true taste of Italy today!</p>
+                    <a class="btn btn-success" routerLink="/product/{{ product.id }}">Details</a>
+                    <button type="submit" (click)="addToCart(product)" class="btn btn-danger">add to Cart <i
+                            class="fa fa-cart-plus" style="font-size:25px"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
