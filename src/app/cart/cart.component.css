@@ -1,6 +1,9 @@
-body {
-    background-color: rgb(103, 210, 174);
+.container{
+    height: 100vh;
 }
+/* body {
+    background-color: rgb(103, 210, 174);
+} */
 
 p{
     font-size: 25px;

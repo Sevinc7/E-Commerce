@@ -1,21 +1,25 @@
-<div style="margin:5%">
-    <div *ngIf="cartItems.length > 0; else noItems">
-        <div *ngFor="let cartItem of cartItems">
-            <h3>{{cartItem.product.name}}</h3>
-            <img src="{{cartItem.product.image}}" style="height:25vh">
-            <h3>{{cartItem.product.price}}</h3>
-            <button type="submit" (click)="decreaseAmount(cartItem)" class="btn btn-warning"><i class="fa fa-minus"
-                    style="font-size:25px"></i></button>
-            <h3>Amount: {{cartItem.count}}</h3>
-            <button type="submit" (click)="increaseAmount(cartItem)" class="btn btn-warning"><i class="fa fa-plus"
+<div class="container">
+
+
+    <div style="margin:5%">
+        <div *ngIf="cartItems.length > 0; else noItems">
+            <div *ngFor="let cartItem of cartItems">
+                <h3>{{cartItem.product.name}}</h3>
+                <img src="{{cartItem.product.image}}" style="height:25vh">
+                <h3>{{cartItem.product.price}}</h3>
+                <button type="submit" (click)="decreaseAmount(cartItem)" class="btn btn-warning"><i class="fa fa-minus"
+                        style="font-size:25px"></i></button>
+                <h3>Amount: {{cartItem.count}}</h3>
+                <button type="submit" (click)="increaseAmount(cartItem)" class="btn btn-warning"><i class="fa fa-plus"
+                        style="font-size:25px"></i></button>
+            </div>
+            <h2>Total: {{getTotalPrice()}} €</h2>
+
+            <button type="submit" (click)="emptyCart()" class="btn btn-danger"><i class="fa fa-trash"
                     style="font-size:25px"></i></button>
         </div>
-        <h2>Total: {{getTotalPrice()}} €</h2>
-
-        <button type="submit" (click)="emptyCart()" class="btn btn-danger"><i class="fa fa-trash"
-                style="font-size:25px"></i></button>
+        <ng-template #noItems>
+            <p>Your cart is empty</p>
+        </ng-template>
     </div>
-    <ng-template #noItems>
-        <p>Your cart is empty</p>
-    </ng-template>
 </div>
