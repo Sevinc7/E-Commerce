@@ -6,3 +6,8 @@
     padding: 20px;
     color: white;
 }
+.navbar-brand:hover{
+    color:rgb(171, 224, 11);
+    transition: 1s;
+    font-size: 30px;
+}
