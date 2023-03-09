@@ -1,10 +1,10 @@
 .navbar-brand{
     padding: 20px;
-    color: white;
+    color: rgb(16, 143, 65);
 }
 .nav-link {
     padding: 20px;
-    color: white;
+    color: rgb(12, 157, 73);
 }
 .navbar-brand:hover{
     color:rgb(171, 224, 11);

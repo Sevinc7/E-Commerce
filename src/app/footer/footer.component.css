@@ -30,5 +30,10 @@ h3:hover{
     transition: color 0.3s;
 }
 .social-icons a:hover {
-    color: #ff5a5f;
+    color: orange;
+}
+
+p{
+    font-family: 'Indie Family', cursive;
+    color: darkgreen;
 }
